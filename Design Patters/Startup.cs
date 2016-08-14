@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(Design_Patters.Startup))]
-namespace Design_Patters
+[assembly: OwinStartupAttribute(typeof(Learning_project.Startup))]
+namespace Learning_project
 {
     public partial class Startup
     {

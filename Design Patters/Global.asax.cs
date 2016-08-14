@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace Design_Patters
+namespace Learning_project
 {
     public class MvcApplication : System.Web.HttpApplication
     {

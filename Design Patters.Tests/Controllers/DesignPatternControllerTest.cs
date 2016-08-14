@@ -1,8 +1,8 @@
 ﻿using Core.Classes.BuilderModel;
-using Design_Patters.Controllers;
+using Learning_project.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Web.Mvc;
-namespace Design_Patters.Tests.Controllers
+namespace Learning_project.Tests.Controllers
 {
     [TestClass]
     public class DesignPatternControllerTest

@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace Design_Patters
+namespace Learning_project
 {
     public class BundleConfig
     {

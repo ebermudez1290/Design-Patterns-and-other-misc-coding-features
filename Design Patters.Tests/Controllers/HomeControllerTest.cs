@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Design_Patters;
-using Design_Patters.Controllers;
+using Learning_project;
+using Learning_project.Controllers;
 
-namespace Design_Patters.Tests.Controllers
+namespace Learning_project.Tests.Controllers
 {
     [TestClass]
     public class HomeControllerTest

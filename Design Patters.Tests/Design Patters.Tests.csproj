@@ -97,9 +97,9 @@
       <Project>{517395EC-B918-4532-9FB5-C33D8A0444C6}</Project>
       <Name>Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Design Patters\Design Patters.csproj">
+    <ProjectReference Include="..\Design Patters\Learning_project.csproj">
       <Project>{5D584C56-841F-4CF8-B56E-C88B847DAEDC}</Project>
-      <Name>Design Patters</Name>
+      <Name>Learning_project</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

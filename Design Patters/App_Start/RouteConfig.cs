@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Design_Patters
+namespace Learning_project
 {
     public class RouteConfig
     {

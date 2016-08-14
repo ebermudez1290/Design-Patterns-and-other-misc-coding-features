@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Design_Patters.Controllers
+namespace Learning_project.Controllers
 {
     public class DesignPatternController : Controller
     {

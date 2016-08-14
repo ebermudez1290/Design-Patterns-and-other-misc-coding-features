@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Design Patters", "Design Patters\Design Patters.csproj", "{5D584C56-841F-4CF8-B56E-C88B847DAEDC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning_project", "Design Patters\Learning_project.csproj", "{5D584C56-841F-4CF8-B56E-C88B847DAEDC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Design Patters.Tests", "Design Patters.Tests\Design Patters.Tests.csproj", "{C57B007F-55A2-4ABC-A4C8-24050896AEF8}"
 EndProject
