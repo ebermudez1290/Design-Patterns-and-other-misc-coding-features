@@ -17,17 +17,14 @@ namespace Design_Patters.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
-
         public AccountController()
         {
         }
-
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
         {
             UserManager = userManager;
             SignInManager = signInManager;
         }
-
         public ApplicationSignInManager SignInManager
         {
             get
@@ -39,7 +36,6 @@ namespace Design_Patters.Controllers
                 _signInManager = value; 
             }
         }
-
         public ApplicationUserManager UserManager
         {
             get
@@ -51,7 +47,6 @@ namespace Design_Patters.Controllers
                 _userManager = value;
             }
         }
-
         //
         // GET: /Account/Login
         [AllowAnonymous]
@@ -60,7 +55,6 @@ namespace Design_Patters.Controllers
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
-
         //
         // POST: /Account/Login
         [HttpPost]
@@ -90,7 +84,6 @@ namespace Design_Patters.Controllers
                     return View(model);
             }
         }
-
         //
         // GET: /Account/VerifyCode
         [AllowAnonymous]
@@ -103,7 +96,6 @@ namespace Design_Patters.Controllers
             }
             return View(new VerifyCodeViewModel { Provider = provider, ReturnUrl = returnUrl, RememberMe = rememberMe });
         }
-
         //
         // POST: /Account/VerifyCode
         [HttpPost]
@@ -133,7 +125,6 @@ namespace Design_Patters.Controllers
                     return View(model);
             }
         }
-
         //
         // GET: /Account/Register
         [AllowAnonymous]
@@ -141,7 +132,6 @@ namespace Design_Patters.Controllers
         {
             return View();
         }
-
         //
         // POST: /Account/Register
         [HttpPost]
@@ -167,11 +157,9 @@ namespace Design_Patters.Controllers
                 }
                 AddErrors(result);
             }
-
             // If we got this far, something failed, redisplay form
             return View(model);
         }
-
         //
         // GET: /Account/ConfirmEmail
         [AllowAnonymous]
@@ -184,7 +172,6 @@ namespace Design_Patters.Controllers
             var result = await UserManager.ConfirmEmailAsync(userId, code);
             return View(result.Succeeded ? "ConfirmEmail" : "Error");
         }
-
         //
         // GET: /Account/ForgotPassword
         [AllowAnonymous]
@@ -192,7 +179,6 @@ namespace Design_Patters.Controllers
         {
             return View();
         }
-
         //
         // POST: /Account/ForgotPassword
         [HttpPost]
@@ -220,7 +206,6 @@ namespace Design_Patters.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
-
         //
         // GET: /Account/ForgotPasswordConfirmation
         [AllowAnonymous]
@@ -228,7 +213,6 @@ namespace Design_Patters.Controllers
         {
             return View();
         }
-
         //
         // GET: /Account/ResetPassword
         [AllowAnonymous]
@@ -236,7 +220,6 @@ namespace Design_Patters.Controllers
         {
             return code == null ? View("Error") : View();
         }
-
         //
         // POST: /Account/ResetPassword
         [HttpPost]
@@ -262,7 +245,6 @@ namespace Design_Patters.Controllers
             AddErrors(result);
             return View();
         }
-
         //
         // GET: /Account/ResetPasswordConfirmation
         [AllowAnonymous]
@@ -270,7 +252,6 @@ namespace Design_Patters.Controllers
         {
             return View();
         }
-
         //
         // POST: /Account/ExternalLogin
         [HttpPost]
@@ -281,7 +262,6 @@ namespace Design_Patters.Controllers
             // Request a redirect to the external login provider
             return new ChallengeResult(provider, Url.Action("ExternalLoginCallback", "Account", new { ReturnUrl = returnUrl }));
         }
-
         //
         // GET: /Account/SendCode
         [AllowAnonymous]
@@ -296,7 +276,6 @@ namespace Design_Patters.Controllers
             var factorOptions = userFactors.Select(purpose => new SelectListItem { Text = purpose, Value = purpose }).ToList();
             return View(new SendCodeViewModel { Providers = factorOptions, ReturnUrl = returnUrl, RememberMe = rememberMe });
         }
-
         //
         // POST: /Account/SendCode
         [HttpPost]
@@ -316,7 +295,6 @@ namespace Design_Patters.Controllers
             }
             return RedirectToAction("VerifyCode", new { Provider = model.SelectedProvider, ReturnUrl = model.ReturnUrl, RememberMe = model.RememberMe });
         }
-
         //
         // GET: /Account/ExternalLoginCallback
         [AllowAnonymous]
@@ -346,7 +324,6 @@ namespace Design_Patters.Controllers
                     return View("ExternalLoginConfirmation", new ExternalLoginConfirmationViewModel { Email = loginInfo.Email });
             }
         }
-
         //
         // POST: /Account/ExternalLoginConfirmation
         [HttpPost]
@@ -384,7 +361,6 @@ namespace Design_Patters.Controllers
             ViewBag.ReturnUrl = returnUrl;
             return View(model);
         }
-
         //
         // POST: /Account/LogOff
         [HttpPost]
@@ -394,7 +370,6 @@ namespace Design_Patters.Controllers
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
             return RedirectToAction("Index", "Home");
         }
-
         //
         // GET: /Account/ExternalLoginFailure
         [AllowAnonymous]
@@ -402,7 +377,6 @@ namespace Design_Patters.Controllers
         {
             return View();
         }
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -422,7 +396,6 @@ namespace Design_Patters.Controllers
 
             base.Dispose(disposing);
         }
-
         #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
